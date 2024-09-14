@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .gallery-title {
+        text-align: center;
+        font-size: 2rem;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+      .lightbox:target {
+        display: flex;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-title">My Image Gallery</div>
+
+    <div class="gallery">
+      <a href="#lightbox1">
+        <img src="file:///D:/image gallery/images/alp.img1.jpg" alt="Image 1" />
+      </a>
+      <a href="#lightbox2">
+        <img src="file:///D:/image gallery/images/ani.alp.jpeg" alt="Image 3" />
+      </a>
+      <a href="#lightbox3">
+        <img src="file:///D:/image gallery/images/alp.img5.jpeg" alt="anirudh" />
+      </a>
+      <a href="#lightbox4">
+        <img src="file:///D:/image gallery/images/alp.img4.jpg" alt="mik splash" />
+      </a>
+      <a href="#lightbox5">
+        <img src="file:///D:/image gallery/images/alp.img8.jpeg" alt="sana" />
+      </a>
+      <a href="#lightbox6">
+        <img src="file:///D:/image gallery/images/alp.img7.jpeg" alt="crowd" />
+      </a>
+      <a href="#lightbox7">
+        <img src="file:///D:/image gallery/images/alp.img6.jpeg" alt="Image 1" />
+      </a>
+    </div>
+
+    <div id="lightbox1" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img1.jpg" alt="Image 1" />
+    </div>
+    <div id="lightbox2" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/ani.alp.jpeg" alt="Image 3" />
+    </div>
+    <div id="lightbox3" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img5.jpeg" alt="anirudh" />
+    </div>
+    <div id="lightbox4" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img4.jpg" alt="mik splash" />
+    </div>
+    <div id="lightbox5" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img8.jpeg" alt="sana" />
+    </div>
+    <div id="lightbox6" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img7.jpeg" alt="crowd" />
+    </div>
+    <div id="lightbox7" class="lightbox">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <img src="file:///D:/image gallery/images/alp.img6.jpeg" alt="Image 1" />
+    </div>
+  </body>
+</html>

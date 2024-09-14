@@ -1,0 +1,53 @@
+/* style.css */
+
+/* Apply a black background to the entire body */
+body {
+    background-color: black;
+    color: white; /* Ensure text is visible on black background */
+    font-family: Arial, sans-serif; /* Set a clean font for better readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the gallery container and add padding */
+.gallery-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for the main image container */
+.main-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the main image */
+#main-image {
+    width: 100%;
+    max-width: 800px; /* Adjust to your preferred size */
+    height: auto;
+    border: 5px solid #fff; /* Add a white border around the main image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better focus */
+}
+
+/* Use CSS Grid to handle the layout of thumbnails */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Auto-fit with minimum size for each thumbnail */
+    gap: 10px; /* Space between thumbnails */
+    justify-content: center;
+}
+
+/* Style for thumbnail images */
+.thumbnail {
+    width: 100%; /* Take full width of the grid cell */
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #fff; /* Add a white border around thumbnails */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Slightly scale up thumbnail on hover */
+}
